@@ -14,11 +14,31 @@ const App = () => {
       category: 'Konut Projesi',
       image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
       description: 'Doğa ile iç içe, modern mimari hatlara sahip ultra lüks konut projesi. Kentsel dokuya uyumlu, sürdürülebilir malzemelerle inşa edilmiştir.',
-      gallery: [
-        'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      gallery:[
+        {
+          url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          tag: 'DIŞ CEPHE',
+          title: 'Modern Kütle ve Teras Tasarımı',
+          description: 'Geniş cam cepheler ve teras alanlarıyla gün ışığından maksimum verim alınmıştır.',
+          details: '450 m² Alan • Doğal Taş Cephe'
+        },
+        {
+          url: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          tag: 'İÇ MİMARİ',
+          title: 'Galeri Boşluğu ve Merdiven Detayı',
+          description: 'Brüt beton yüzeyler ve ahşap dokuların dengeli birleşimiyle ferah bir iç mekan kurgulanmıştır.',
+          details: 'Yüksek Tavan • Özel Ahşap İşçiliği'
+        },
+        {
+          url: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          tag: 'YAŞAM ALANI',
+          title: 'Açık Plan Salon ve Peyzaj İlişkisi',
+          description: 'Bahçe ile doğrudan bağlantı kuran geniş açıklıklar sayesinde iç ve dış mekan bütünleştirilmiştir.',
+          details: 'Akıllı Ev Sistemi • Yerden Isıtma'
+        }
       ]
+       
+    
     },
     {
       id: 2,
@@ -27,9 +47,22 @@ const App = () => {
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
       description: 'Şehrin yeni silüetini oluşturan, ergonomik ofis alanları ve akıllı bina sistemleriyle donatılmış prestijli iş merkezi.',
       gallery: [
-        'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+        {
+          url: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          tag: 'CEPHE TASARIMI',
+          title: 'Cam Giydirme Kule Mimarisi',
+          description: 'Enerji verimli güneş kontrol camları ile modern bir iş merkezi silüeti oluşturulmuştur.',
+          details: '24 Kat • LEED Gold Sertifikalı'
+        },
+        {
+          url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          tag: 'OFİS İÇ MEKAN',
+          title: 'Ergonomik Çalışma ve Toplantı Alanları',
+          description: 'Akustik düzenlemeler ve doğal aydınlatma odaklı açık ofis kurgusu tasarlanmıştır.',
+          details: 'Akıllı İklimlendirme • Modüler Bölme'
+        }
       ]
+    
     },
     {
       id: 3,
@@ -38,8 +71,14 @@ const App = () => {
       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
       description: 'Orijinal dokusuna sadık kalınarak, günümüz teknolojisiyle güçlendirilmiş tarihi köşk restorasyon projesi.',
       gallery: [
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-      ]
+        {
+          url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          tag: 'CEPHE & RESTORASYON',
+          title: 'Özgün Cephe ve Yapısal Güçlendirme',
+          description: 'Tarihi yapının orijinal mimari dokusu titizlikle korunmuş, görünmeyen modern mühendislik çözümleriyle yapı günümüz standartlarına kavuşturulmuştur.',
+          details: 'Özgün Malzeme Koruma • Modern İklimlendirme Entegrasyonu'
+        }
+      ] 
     }
   ];
 
@@ -315,11 +354,55 @@ const App = () => {
             
             <div className="p-8 md:p-16 max-w-7xl mx-auto">
               <h4 className="text-2xl font-light mb-8">3D Render & <span className="font-bold">İç Mimari Detaylar</span></h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {selectedProject.gallery.map((img, idx) => (
-                  <img key={idx} src={img} alt={`Gallery ${idx}`} className="w-full h-[400px] object-cover border border-white/5 hover:border-[#d4af37]/30 transition-colors" />
-                ))}
-              </div>
+              <div className="space-y-10">
+                  {selectedProject.gallery.map((item, idx) => {
+                    const imgUrl = typeof item === 'string' ? item : item.url;
+                    const tag = typeof item === 'string' ? null : item.tag;
+                    const title = typeof item === 'string' ? null : item.title;
+                    const description = typeof item === 'string' ? null : item.description;
+                    const details = typeof item === 'string' ? null : item.details;
+
+                    return (
+                      <div
+                        key={idx}
+                        className={`flex flex-col md:flex-row gap-8 items-center bg-white/[0.02] border border-white/5 hover:border-[#d4af37]/30 transition-colors p-4 md:p-6 ${
+                          idx % 2 === 1 ? 'md:flex-row-reverse' : ''
+                        }`}
+                      >
+                        <div className="w-full md:w-3/5 overflow-hidden">
+                          <img
+                            src={imgUrl}
+                            alt={title || `Gallery ${idx}`}
+                            className="w-full h-[350px] md:h-[400px] object-cover hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+
+                        <div className="w-full md:w-2/5 space-y-4">
+                          {tag && (
+                            <p className="text-[#d4af37] tracking-[0.2em] text-xs font-semibold uppercase">
+                              {tag}
+                            </p>
+                          )}
+                          {title && (
+                            <h5 className="text-2xl font-light text-white">
+                              {title}
+                            </h5>
+                          )}
+                          {description && (
+                            <p className="text-gray-300 font-light leading-relaxed">
+                              {description}
+                            </p>
+                          )}
+                          {details && (
+                            <p className="text-xs text-gray-400 tracking-wider pt-4 border-t border-white/10">
+                              {details}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
             </div>
           </div>
         </div>
